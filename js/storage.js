@@ -93,11 +93,19 @@ export function seedIfEmpty() {
   if (getAll().length > 0) return;
   const samples = [
     { title: 'Coffee with Mom', body: 'We sat by the window for two hours and talked about everything and nothing. She laughed at my jokes for once.', mood: '🥰', category: 'family', color: 'pink', date: daysAgo(2) },
-    { title: 'Finished the algorithm project', body: 'Three weeks of debugging and it finally compiled clean. I yelled in my room.', mood: '🎉', category: 'achievement', color: 'yellow', date: daysAgo(7) },
-    { title: 'Rainy walk', body: 'Forgot the umbrella, did not care. The smell of wet asphalt felt like childhood.', mood: '✨', category: 'self', color: 'blue', date: daysAgo(12) },
-    { title: 'Grandmas borek', body: 'She showed me her trick with the yufka. I almost cried at the table.', mood: '😍', category: 'food', color: 'orange', date: daysAgo(20) },
-    { title: 'Late night with Ali', body: 'We talked about our plans for the summer until 4am. I forgot how good a real conversation feels.', mood: '💖', category: 'friends', color: 'purple', date: daysAgo(34) },
-    { title: 'First time on a ferry alone', body: 'Stood at the back and watched Istanbul shrink. Felt brave for no reason.', mood: '🌟', category: 'travel', color: 'green', date: daysAgo(60) }
+    { title: 'Finished the algorithm project', body: 'Three weeks of debugging and it finally compiled clean. I yelled in my room.', mood: '🎉', category: 'achievement', color: 'yellow', date: daysAgo(5) },
+    { title: 'Rainy walk', body: 'Forgot the umbrella, did not care. The smell of wet asphalt felt like childhood.', mood: '✨', category: 'self', color: 'blue', date: daysAgo(8) },
+    { title: 'Tea on the balcony', body: 'Two glasses of cay, no phones, just the sound of cars. Forty minutes that felt like a small holiday.', mood: '☕', category: 'self', color: 'orange', date: daysAgo(11) },
+    { title: 'Grandmas borek', body: 'She showed me her trick with the yufka. I almost cried at the table.', mood: '😍', category: 'food', color: 'orange', date: daysAgo(15) },
+    { title: 'Stray cat in the courtyard', body: 'It walked up like it owned the place. I named it Pamuk and gave it half my simit.', mood: '😊', category: 'random', color: 'pink', date: daysAgo(19) },
+    { title: 'Got an A on the project', body: 'I read the email three times to make sure. Walked around the kitchen for a while just smiling.', mood: '🎉', category: 'achievement', color: 'yellow', date: daysAgo(24) },
+    { title: 'Late night with Ali', body: 'We talked about our plans for the summer until 4am. I forgot how good a real conversation feels.', mood: '💖', category: 'friends', color: 'purple', date: daysAgo(31) },
+    { title: 'Bookshop in Kadikoy', body: 'Found a used copy of a book I had been looking for. The owner gave me a 20 lira discount for no reason.', mood: '✨', category: 'random', color: 'green', date: daysAgo(38) },
+    { title: 'Sunday breakfast', body: 'Eggs, olives, white cheese, fresh bread. The whole family at the table. Nobody was on their phone.', mood: '🥰', category: 'family', color: 'yellow', date: daysAgo(45) },
+    { title: 'First time on a ferry alone', body: 'Stood at the back and watched Istanbul shrink. Felt brave for no reason.', mood: '🌟', category: 'travel', color: 'blue', date: daysAgo(52) },
+    { title: 'Helped a tourist with directions', body: 'They thanked me four times. I have been smiling about it all afternoon.', mood: '😊', category: 'random', color: 'green', date: daysAgo(58) },
+    { title: 'Snow on the way home', body: 'Stepped out of the metro and the whole street was white. People were laughing in the cold.', mood: '✨', category: 'self', color: 'blue', date: daysAgo(67) },
+    { title: 'Cousins wedding', body: 'Danced for three hours. Auntie Nilgun cried twice. I lost a button on my shirt and did not care.', mood: '🎉', category: 'family', color: 'purple', date: daysAgo(82) }
   ];
   samples.forEach(add);
 }

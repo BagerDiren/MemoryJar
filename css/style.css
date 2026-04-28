@@ -362,11 +362,39 @@ a:hover { color: var(--walnut); }
 }
 
 .jar__paper {
-  width: 30px;
-  height: 24px;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(74, 55, 40, 0.15);
+  width: 32px;
+  height: 26px;
+  border-radius: 2px 2px 3px 2px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(74, 55, 40, 0.18),
+    inset 0 -2px 3px rgba(74, 55, 40, 0.06);
   animation: paper-float 4s ease-in-out infinite;
+}
+
+.jar__paper::before {
+  content: '';
+  position: absolute;
+  inset: 4px 5px 7px 5px;
+  background-image:
+    linear-gradient(rgba(74, 55, 40, 0.3) 1px, transparent 1px),
+    linear-gradient(rgba(74, 55, 40, 0.3) 1px, transparent 1px);
+  background-size: 100% 100%, 70% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 25%, 0 75%;
+}
+
+.jar__paper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 0;
+  border-color: transparent rgba(74, 55, 40, 0.18) transparent transparent;
 }
 
 .jar__paper:nth-child(odd) { animation-delay: -1s; }
@@ -735,37 +763,62 @@ a:hover { color: var(--walnut); }
 .jar-papers-grid {
   position: absolute;
   inset: 0;
-  padding: 30px 25px;
+  padding: 40px 30px 50px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px 6px;
   align-content: end;
 }
 
 .jar-paper-mini {
-  aspect-ratio: 1.2;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(74, 55, 40, 0.2);
+  aspect-ratio: 1.05;
+  border-radius: 2px 2px 4px 2px;
   cursor: pointer;
   transition: transform 0.2s;
   animation: paper-float 4s ease-in-out infinite;
   position: relative;
   overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(74, 55, 40, 0.15),
+    0 3px 6px rgba(74, 55, 40, 0.10),
+    inset 0 -3px 5px rgba(74, 55, 40, 0.06);
 }
 
+/* Faux handwriting lines (3 short lines on each note) */
+.jar-paper-mini::before {
+  content: '';
+  position: absolute;
+  inset: 18% 18% 28% 18%;
+  background-image:
+    linear-gradient(rgba(74, 55, 40, 0.32) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(74, 55, 40, 0.32) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(74, 55, 40, 0.32) 1.5px, transparent 1.5px);
+  background-size: 100% 100%, 75% 100%, 60% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0%, 0 50%, 0 100%;
+  border-radius: 1px;
+}
+
+/* Folded corner */
 .jar-paper-mini::after {
   content: '';
   position: absolute;
-  inset: 2px;
-  background-image:
-    linear-gradient(transparent 60%, rgba(74,55,40,0.1) 60%, rgba(74,55,40,0.1) 65%, transparent 65%),
-    linear-gradient(transparent 75%, rgba(74,55,40,0.1) 75%, rgba(74,55,40,0.1) 80%, transparent 80%);
-  border-radius: 2px;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 0;
+  border-color: transparent rgba(74, 55, 40, 0.18) transparent transparent;
+  filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.06));
 }
 
 .jar-paper-mini:hover {
-  transform: scale(1.15);
+  transform: scale(1.18) translateY(-2px);
   z-index: 5;
+  box-shadow:
+    0 4px 8px rgba(74, 55, 40, 0.25),
+    0 8px 16px rgba(74, 55, 40, 0.15);
 }
 
 .jar-empty-state {

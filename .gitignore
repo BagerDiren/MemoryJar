@@ -6,3 +6,4 @@ node_modules/
 .claude/
 screenshots/node_modules/
 screenshots/package-lock.json
+report/
