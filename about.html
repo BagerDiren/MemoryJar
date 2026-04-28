@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — MemoryJar</title>
+  <meta name="description" content="The idea, the technologies, and the person behind MemoryJar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫙</text></svg>" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__brand-icon">🫙</span>
+      <span>MemoryJar</span>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html" data-page="home">Home</a></li>
+      <li><a class="nav__link" href="add.html" data-page="add">Add</a></li>
+      <li><a class="nav__link" href="jar.html" data-page="jar">My Jar</a></li>
+      <li><a class="nav__link" href="wall.html" data-page="wall">Wall</a></li>
+      <li><a class="nav__link" href="about.html" data-page="about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container container--narrow">
+      <header class="section__head" style="text-align:left;">
+        <h1>About MemoryJar</h1>
+        <p class="section__lead" style="margin:0; max-width:none;">The idea, the technology, and the person behind it.</p>
+      </header>
+
+      <section class="about-section">
+        <h2>Why this exists</h2>
+        <p>
+          The big moments in life — graduations, weddings, trips abroad — already
+          have photos and stories around them. The small ones don't. The good
+          coffee, the late-night conversation, the small thing a friend said
+          that made the day feel lighter — those slip away within a week.
+        </p>
+        <p>
+          MemoryJar is a small attempt to keep them. You drop a memory in the
+          jar whenever life is sweet, and shake the jar later when you need
+          a small lift. That's the whole product.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>How it's built</h2>
+        <p>
+          MemoryJar is a static, multi-page web application written from scratch
+          in plain HTML, CSS and JavaScript — no frameworks, no build step.
+          That choice is deliberate: the site has to load instantly, work
+          offline, and stay readable for someone reviewing the source code.
+        </p>
+        <p>
+          Memories are saved directly inside the browser using the
+          <strong>localStorage</strong> Web API, which acts as a tiny
+          per-device database. Nothing leaves the user's machine — there is
+          no backend server, no account, and no tracking.
+        </p>
+        <ul class="tech-list">
+          <li class="tech-tag">HTML5</li>
+          <li class="tech-tag">CSS3 (Custom Properties, Grid, Flexbox)</li>
+          <li class="tech-tag">JavaScript (ES Modules)</li>
+          <li class="tech-tag">localStorage Web API</li>
+          <li class="tech-tag">Google Fonts</li>
+          <li class="tech-tag">crypto.randomUUID</li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>The pages</h2>
+        <p><strong>Home</strong> — a quiet landing page with a glass-jar illustration, your live stats and your most recent four memories.</p>
+        <p><strong>Add</strong> — a friendly form with a mood picker, category dropdown, paper-colour picker and date selector.</p>
+        <p><strong>My Jar</strong> — the jar itself. Every memory is a little folded paper inside the glass; tap any paper to read it, or hit "Shake the jar" to pull a random one out.</p>
+        <p><strong>Wall</strong> — the full collection in a grid, with live search, category chips, summary stats and a category bar chart.</p>
+        <p><strong>About</strong> — this page.</p>
+      </section>
+
+      <section class="about-section">
+        <h2>The author</h2>
+        <p>
+          MemoryJar was designed and developed by
+          <strong>Bager Diren Karakoyun</strong> — a Software Engineering
+          student at Altınbaş University (student no. <strong>210513250</strong>) —
+          for the Internet Programming course taught by F. Kuzey Edes Huyal.
+        </p>
+        <p>
+          Source code:
+          <a href="https://github.com/BagerDiren" target="_blank" rel="noopener">github.com/BagerDiren</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong>MemoryJar</strong> — a small place for the small good moments.</p>
+    <p>Built by Bager Diren Karakoyun · <a href="https://github.com/BagerDiren" target="_blank" rel="noopener">github.com/BagerDiren</a></p>
+  </footer>
+
+  <script type="module">
+    import { initNav } from './js/nav.js';
+    initNav('about');
+  </script>
+</body>
+</html>

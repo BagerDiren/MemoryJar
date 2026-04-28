@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Jar — MemoryJar</title>
+  <meta name="description" content="Open your jar and pull out a random memory." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫙</text></svg>" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__brand-icon">🫙</span>
+      <span>MemoryJar</span>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html" data-page="home">Home</a></li>
+      <li><a class="nav__link" href="add.html" data-page="add">Add</a></li>
+      <li><a class="nav__link" href="jar.html" data-page="jar">My Jar</a></li>
+      <li><a class="nav__link" href="wall.html" data-page="wall">Wall</a></li>
+      <li><a class="nav__link" href="about.html" data-page="about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container">
+      <header class="section__head">
+        <h1>Your jar</h1>
+        <p class="section__lead">Tap any folded paper to read it, or shake the jar to pull out a random one.</p>
+      </header>
+
+      <div class="jar-stage">
+        <div class="jar-large" id="big-jar" aria-label="Memory jar — click papers to read">
+          <div class="jar__lid"></div>
+          <div class="jar__neck"></div>
+          <div class="jar__body">
+            <div class="jar-papers-grid" id="papers-grid"></div>
+            <div class="jar-empty-state" id="empty-state" style="display:none">
+              <div style="font-size:3rem; margin-bottom:0.5rem">🫙</div>
+              The jar is empty.<br />Add your first memory to fill it up.
+            </div>
+          </div>
+          <div class="jar__label">memories</div>
+          <div class="jar__base"></div>
+        </div>
+
+        <div class="shake-controls">
+          <button class="btn btn--primary" id="shake-btn">🎲 Shake the jar</button>
+          <a class="btn btn--secondary" href="add.html">+ Add a memory</a>
+          <a class="btn btn--ghost" href="wall.html">See all on the wall →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
+    <div class="modal" id="modal-content"></div>
+  </div>
+
+  <footer class="footer">
+    <p><strong>MemoryJar</strong> — a small place for the small good moments.</p>
+    <p>Built by Bager Diren Karakoyun · <a href="https://github.com/BagerDiren" target="_blank" rel="noopener">github.com/BagerDiren</a></p>
+  </footer>
+
+  <script type="module" src="js/jar.js"></script>
+</body>
+</html>

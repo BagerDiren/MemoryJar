@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Wall — MemoryJar</title>
+  <meta name="description" content="Browse all of your memories with search and category filters." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫙</text></svg>" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__brand-icon">🫙</span>
+      <span>MemoryJar</span>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html" data-page="home">Home</a></li>
+      <li><a class="nav__link" href="add.html" data-page="add">Add</a></li>
+      <li><a class="nav__link" href="jar.html" data-page="jar">My Jar</a></li>
+      <li><a class="nav__link" href="wall.html" data-page="wall">Wall</a></li>
+      <li><a class="nav__link" href="about.html" data-page="about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container">
+      <header class="section__head" style="text-align:left;">
+        <h1>Memory Wall</h1>
+        <p class="section__lead" style="margin:0; max-width:none;">Every memory you've dropped in. Search, filter, and rediscover.</p>
+      </header>
+
+      <section class="section" style="padding-top:1rem;">
+        <div class="stats" id="stats-container"></div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <h2 style="margin-bottom:1rem;">Where the joy lives</h2>
+        <div class="form-card" id="chart-container"></div>
+      </section>
+
+      <section class="section" style="padding-top:1rem;">
+        <h2 style="margin-bottom:1rem;">All memories</h2>
+        <div class="filters">
+          <div class="filters__search">
+            <input id="search" type="text" placeholder="Search memories…" />
+          </div>
+          <div id="category-chips" style="display:flex; gap:0.5rem; flex-wrap:wrap;"></div>
+        </div>
+        <div class="wall-grid" id="wall-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong>MemoryJar</strong> — a small place for the small good moments.</p>
+    <p>Built by Bager Diren Karakoyun · <a href="https://github.com/BagerDiren" target="_blank" rel="noopener">github.com/BagerDiren</a></p>
+  </footer>
+
+  <script type="module" src="js/wall.js"></script>
+</body>
+</html>

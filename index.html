@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemoryJar — Capture the small good moments</title>
+  <meta name="description" content="A cozy digital jar for capturing happy moments. Drop in a memory whenever life is sweet, and shake the jar when you need a smile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫙</text></svg>" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__brand-icon">🫙</span>
+      <span>MemoryJar</span>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav__links">
+      <li><a class="nav__link" href="index.html" data-page="home">Home</a></li>
+      <li><a class="nav__link" href="add.html" data-page="add">Add</a></li>
+      <li><a class="nav__link" href="jar.html" data-page="jar">My Jar</a></li>
+      <li><a class="nav__link" href="wall.html" data-page="wall">Wall</a></li>
+      <li><a class="nav__link" href="about.html" data-page="about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="hero__text">
+          <h1>
+            Save the small <span class="hero__title-accent">good moments</span> —
+            open them when you need a smile.
+          </h1>
+          <p class="hero__subtitle">
+            MemoryJar is a quiet little corner of the web for capturing the
+            moments that usually slip through the cracks. Write them down,
+            drop them into the jar, and shake the jar later to pull one back out.
+          </p>
+          <div class="hero__actions">
+            <a href="add.html" class="btn btn--primary">+ Add a memory</a>
+            <a href="jar.html" class="btn btn--secondary">Shake the jar</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="jar" aria-hidden="true">
+            <div class="jar__lid"></div>
+            <div class="jar__neck"></div>
+            <div class="jar__body">
+              <div class="jar__papers"></div>
+            </div>
+            <div class="jar__label">memories</div>
+            <div class="jar__base"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">Your jar so far</h2>
+          <p class="section__lead">A quick glance at what you've collected.</p>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__value" data-stat="total">0</span>
+            <span class="stat__label">Memories saved</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" data-stat="months">0</span>
+            <span class="stat__label">Months active</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" data-stat="top">—</span>
+            <span class="stat__label">Most felt mood</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">Made for the small wins</h2>
+          <p class="section__lead">A few things that make MemoryJar yours.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="feature-card">
+            <span class="feature-card__icon">✍️</span>
+            <h3 class="feature-card__title">Write in seconds</h3>
+            <p class="feature-card__text">A title, a few lines, a mood and a colour. That's all it takes to drop a memory in.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon">🎲</span>
+            <h3 class="feature-card__title">Shake & rediscover</h3>
+            <p class="feature-card__text">Pull a random memory back out — perfect for grey afternoons that need a small lift.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon">🔒</span>
+            <h3 class="feature-card__title">Stays on your device</h3>
+            <p class="feature-card__text">Memories live in your browser's storage. No account, no cloud, no awkward emails.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon">📊</span>
+            <h3 class="feature-card__title">See your year</h3>
+            <p class="feature-card__text">A simple breakdown of moods and categories, so you can see where the joy lives.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">Lately in the jar</h2>
+          <p class="section__lead">Your four most recent drops.</p>
+        </div>
+        <div class="recent-strip"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong>MemoryJar</strong> — a small place for the small good moments.</p>
+    <p>Built by Bager Diren Karakoyun · <a href="https://github.com/BagerDiren" target="_blank" rel="noopener">github.com/BagerDiren</a></p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

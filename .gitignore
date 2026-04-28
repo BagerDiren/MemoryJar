@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.vscode/
+.idea/
+*.log
+.claude/
+screenshots/node_modules/
+screenshots/package-lock.json
